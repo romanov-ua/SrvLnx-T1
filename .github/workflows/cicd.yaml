@@ -67,4 +67,5 @@ jobs:
          passphrase: ${{ secrets.PASSPHRASE }}
          script: 
           docker pull ghcr.io/romanov-ua/srvlnx-t1:main
-          docker compose up -d
+          docker compose stop
+          docker compose .github\workflows\cicd.yaml up -d
