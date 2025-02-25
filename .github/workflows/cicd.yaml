@@ -50,7 +50,7 @@ jobs:
          push: true
          tags: ${{ steps.meta.outputs.tags }}
          labels: ${{ steps.meta.outputs.labels }}
- build:
+
    name: Build
    runs-on: ubuntu-latest
    steps:
