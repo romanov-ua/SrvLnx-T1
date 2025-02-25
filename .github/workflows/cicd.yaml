@@ -65,7 +65,8 @@ jobs:
          key: ${{ secrets.KEY }}
          port: ${{ secrets.PORT }}
          passphrase: ${{ secrets.PASSPHRASE }}
-         script: 
+         script: | 
+          cd .github\workflows\cicd.yaml
           docker pull ghcr.io/romanov-ua/srvlnx-t1:main
-          docker compose stop
-          docker compose .github\workflows\cicd.yaml up
+          docker compose down
+          docker compose up -d
